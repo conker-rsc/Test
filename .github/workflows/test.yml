@@ -1,0 +1,20 @@
+name: Test
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      binary_version:
+        description: 'Input'
+        type: string
+        required: true
+      platform:
+        description: 'Platform'
+        required: true
+        default: 'none'
+        type: choice
+        options:
+          - One
+          - Two
